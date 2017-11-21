@@ -4,14 +4,29 @@
 #include <sstream>
 #include <string>
 
+void readPrintInput(std::vector<std::string>& nameVector, 
+               std::vector<std::string>& balanceVector);
+
 void main()
 {
     //read data in from a text file
-
-    std::ifstream infile("data.txt");
-    const char delim = '|';
     std::vector<std::string> nameVector;
     std::vector<std::string> balanceVector;
+    readPrintInput(nameVector, balanceVector);
+
+    //sort the vector 
+
+    // for (size_t i = 0; i != nameVector.size()-1; ++i){
+    //     std::cout << nameVector[i];
+    //     std::cout << nameVector[i+1];
+    // }
+
+}
+
+void readPrintInput(std::vector<std::string>& nameVector, 
+               std::vector<std::string>& balanceVector){
+    std::ifstream infile("data.txt");
+    const char delim = '|';
     std::string line;
 
     while (std::getline(infile, line)){
@@ -32,8 +47,5 @@ void main()
     for (size_t i = 0; i != nameVector.size(); ++i){
         std::cout << nameVector[i] << ": " << balanceVector[i] << "\n";
     }
-
-    //put that data into a vector
-    //sort the vector 
 
 }
