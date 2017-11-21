@@ -23,13 +23,7 @@ void main()
     balanceSorted.push_back(balanceVector[0]);
 
     for (size_t i = 1; i != nameVector.size(); ++i){
-        // std::cout << "i: " << i << "\n";
         for (size_t k = 0; k != nameSorted.size(); ++k){   
-            // std::cout << "k: " << k << "\n";
-            // std::cout << "k: " << k-1 << "\n";
-            // k_minus = k - 1;
-            // std::cout << "k: " << k_minus << "\n";
-            // std::cout << "k: " << k+1 << "\n";
             std::cout << "compare: " << nameVector[i] << " " << nameSorted[k] << "\n";
 
             if ( nameVector[i] <= nameSorted[k] ) {
