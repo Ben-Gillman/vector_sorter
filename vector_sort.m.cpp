@@ -15,7 +15,6 @@ void main()
     std::string line;
 
     while (std::getline(infile, line)){
-        std::cout << line << "\n";
         std::string data;
         std::stringstream ss(line);
         int counter = 1;
